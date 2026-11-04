@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Akash Maurya — BCA undergraduate, beginner programmer and creator behind Coder With BCA.">
+  <title>Akash Maurya | Coder With BCA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b14;--panel:#101625;--panel2:#0d1320;--text:#eef3ff;--muted:#9aa8c0;--cyan:#63e6f5;--purple:#a78bfa;--line:rgba(154,168,192,.17);--green:#9af2c4}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(101,76,200,.16),transparent 35%),radial-gradient(ellipse at 0% 25%,rgba(30,174,195,.10),transparent 32%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(8,11,20,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:-.7px}.brand span{color:var(--cyan)}.nav-links{display:flex;gap:26px;color:var(--muted);font-size:13px;font-weight:700}.nav-links a:hover{color:var(--cyan)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 11px}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:60px;padding:90px 0 80px}
+    .eyebrow,.mono{font-family:"DM Mono",monospace;color:var(--cyan);font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
+    h1{font-size:clamp(48px,7vw,82px);line-height:1.03;letter-spacing:-5px;margin:20px 0}
+    h1 .gradient{background:linear-gradient(100deg,var(--cyan),#b7a3ff 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:610px;color:var(--muted);font-size:17px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;font-weight:800;font-size:13px;border:1px solid var(--line);transition:.2s}
+    .btn.primary{background:linear-gradient(110deg,var(--cyan),#a8a0ff);color:#07101b;border:0}.btn:hover{transform:translateY(-3px);border-color:var(--cyan)}
+    .hero-card{position:relative;border:1px solid rgba(99,230,245,.23);border-radius:26px;padding:28px;background:linear-gradient(145deg,rgba(18,29,47,.96),rgba(13,17,31,.92));box-shadow:0 25px 90px rgba(0,0,0,.32);overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(99,230,245,.12);filter:blur(55px);right:-70px;top:-70px}
+    .terminal-top{display:flex;gap:7px;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:22px}
+    .dot{width:9px;height:9px;border-radius:50%;background:#fb7185}.dot:nth-child(2){background:#fbbf24}.dot:nth-child(3){background:#86efac}
+    .terminal{font:13px/2 "DM Mono",monospace;color:var(--muted);position:relative}.terminal b{color:var(--green);font-weight:500}.terminal .key{color:var(--purple)}.terminal .value{color:var(--cyan)}
+    .status{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:8px 11px;border-radius:30px;background:rgba(154,242,196,.08);color:var(--green);font-size:11px;font-weight:800}
+    .pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+    section{padding:82px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}
+    .section-head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-2px;margin:7px 0 0}.section-head p{max-width:420px;color:var(--muted);font-size:14px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:linear-gradient(145deg,rgba(17,25,41,.95),rgba(12,18,30,.95));border:1px solid var(--line);border-radius:18px;padding:25px}
+    .panel h3{margin:0 0 10px;font-size:17px}.panel p{margin:0;color:var(--muted);font-size:14px}
+    .focus-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.focus{padding:12px;border:1px solid var(--line);border-radius:12px;color:#dbe7fa;font-size:13px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.tag{font:12px "DM Mono",monospace;color:#cbd7ed;background:#121d2d;border:1px solid rgba(99,230,245,.14);border-radius:8px;padding:9px 12px}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{display:flex;flex-direction:column;min-height:260px;transition:.22s}.project:hover{transform:translateY(-5px);border-color:rgba(99,230,245,.42)}
+    .project-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:rgba(99,230,245,.1);color:var(--cyan);font-size:20px;margin-bottom:20px}
+    .project h3{font-size:18px;margin:0 0 8px}.project p{font-size:13px;color:var(--muted);margin:0 0 20px}.project .meta{font:11px "DM Mono",monospace;color:var(--cyan);margin-top:auto}
+    .project-link{display:inline-flex;align-items:center;gap:8px;margin-top:15px;color:var(--text);font-size:12px;font-weight:800}.project-link:hover{color:var(--cyan)}
+    .creator{display:grid;grid-template-columns:1fr 1fr;gap:18px}.social-card{display:flex;align-items:center;gap:18px}.social-icon{flex:none;width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:rgba(167,139,250,.12);color:var(--purple);font-size:23px}.social-card p{font-size:13px;color:var(--muted);margin:4px 0 0}
+    .connect{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:34px;border:1px solid rgba(99,230,245,.25);border-radius:22px;background:linear-gradient(110deg,rgba(24,52,66,.65),rgba(37,26,65,.55))}
+    .connect h2{font-size:30px;letter-spacing:-1.5px;margin:0 0 5px}.connect p{color:var(--muted);margin:0;font-size:14px}
+    footer{padding:28px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:35px;padding-top:65px;min-height:auto}.hero-card{max-width:560px}.project-grid{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.nav-inner{height:64px}.menu{display:block}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;padding:18px 22px;background:#0b101c;border-bottom:1px solid var(--line);flex-direction:column;gap:15px}.nav-links.open{display:flex}h1{letter-spacing:-3px}.hero p{font-size:15px}.project-grid,.about-grid,.creator{grid-template-columns:1fr}.focus-list{grid-template-columns:1fr 1fr}.connect{align-items:start;flex-direction:column}.connect h2{font-size:26px}section{padding:65px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home">&lt;<span>coder</span>_with_bca /&gt;</a>
+      <button class="menu" id="menuBtn" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#skills">Learning</a><a href="#projects">Projects</a><a href="#creator">Creator</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <div class="wrap hero">
+      <div class="reveal">
+        <div class="eyebrow">BCA UNDERGRADUATE · INDIA</div>
+        <h1>Hi, I'm<br><span class="gradient">Akash Maurya.</span></h1>
+        <p>I’m a beginner programmer learning by building. I document my coding journey, share beginner-friendly tech content, and turn what I learn into small, practical projects.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work ↗</a>
+          <a class="btn" href="https://github.com/coder-with-bca" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+        </div>
+        <div class="status"><span class="pulse"></span> LEARNING · BUILDING · SHARING</div>
+      </div>
+      <div class="hero-card reveal" aria-label="Developer profile code card">
+        <div class="terminal-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="terminal">
+          <div><span class="key">const</span> developer = {</div>
+          <div>&nbsp;&nbsp;name: <span class="value">"Akash Maurya"</span>,</div>
+          <div>&nbsp;&nbsp;handle: <span class="value">"coder_with_bca"</span>,</div>
+          <div>&nbsp;&nbsp;role: <span class="value">"BCA Undergrad"</span>,</div>
+          <div>&nbsp;&nbsp;learning: [</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">"C"</span>, <span class="value">"Python"</span>,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">"HTML"</span>, <span class="value">"CSS"</span>,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">"JavaScript"</span></div>
+          <div>&nbsp;&nbsp;],</div>
+          <div>&nbsp;&nbsp;mindset: <b>"Build. Learn. Repeat."</b></div>
+          <div>};</div>
+          <br>
+          <div><span class="key">console</span>.<span class="value">log</span>(developer);<span class="pulse" style="display:inline-block;margin-left:5px"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">01 / ABOUT</div><h2>A learner who builds.</h2></div><p>My focus is on understanding fundamentals, practising consistently, and sharing useful things with other students.</p></div>
+        <div class="about-grid">
+          <article class="panel reveal"><h3>My approach</h3><p>I’m documenting my journey from programming fundamentals to building useful web projects. I believe in learning concepts properly, experimenting, and improving one feature at a time.</p></article>
+          <article class="panel reveal"><h3>What I'm focused on</h3><div class="focus-list"><div class="focus">📘 Programming basics</div><div class="focus">🌐 Web development</div><div class="focus">🧩 Small projects</div><div class="focus">🎥 Tech content</div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">02 / LEARNING STACK</div><h2>Tools I'm exploring.</h2></div><p>These are my current learning areas—not a claim of professional expertise.</p></div>
+        <div class="panel reveal">
+          <h3>Programming & web fundamentals</h3>
+          <div class="skills"><span class="tag">C — Learning</span><span class="tag">Python — Learning</span><span class="tag">HTML — Exploring</span><span class="tag">CSS — Exploring</span><span class="tag">JavaScript — Exploring</span><span class="tag">Git & GitHub</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">03 / SELECTED WORK</div><h2>Projects & experiments.</h2></div><p>Small builds that help me practise, explore ideas, and learn through making.</p></div>
+        <div class="project-grid">
+          <article class="panel project reveal"><div class="project-icon">◷</div><h3>HabitLoop</h3><p>A browser-based habit tracker with daily check-ins, progress views, export options, and switchable IPL and anime themes.</p><div class="meta">HTML · BROWSER APP</div><a class="project-link" href="https://github.com/coder-with-bca/HabitLoop" target="_blank" rel="noreferrer">View repository ↗</a></article>
+          <article class="panel project reveal"><div class="project-icon">▣</div><h3>Crazy E-Book</h3><p>A student-friendly ebook storefront project, built with Akki & Aadi, featuring a catalogue, search, previews, and an order flow.</p><div class="meta">HTML · DIGITAL PRODUCTS</div><a class="project-link" href="https://github.com/coder-with-bca/crazy-ebook" target="_blank" rel="noreferrer">View repository ↗</a></article>
+          <article class="panel project reveal"><div class="project-icon">⌁</div><h3>Secret Chat</h3><p>A browser-based chat starter experiment exploring Supabase and the Web Crypto API.</p><div class="meta">SUPABASE · WEB CRYPTO API</div><a class="project-link" href="https://github.com/coder-with-bca?tab=repositories" target="_blank" rel="noreferrer">Check GitHub repositories ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="creator">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">04 / BEYOND CODE</div><h2>Learning out loud.</h2></div><p>Coder With BCA is where I share the process—not just the finished result.</p></div>
+        <div class="creator">
+          <a class="panel social-card reveal" href="https://www.youtube.com/@coder_with_bca" target="_blank" rel="noreferrer"><div class="social-icon">▶</div><div><h3>YouTube</h3><p>Coding lessons, beginner tech explanations, and my learning journey.</p><span class="project-link">Visit channel ↗</span></div></a>
+          <a class="panel social-card reveal" href="https://www.instagram.com/coder_with_bca" target="_blank" rel="noreferrer"><div class="social-icon">◎</div><div><h3>Instagram</h3><p>Short-form updates, coding content, and creator posts.</p><span class="project-link">Follow on Instagram ↗</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="connect reveal"><div><div class="eyebrow">05 / LET'S CONNECT</div><h2>Have an idea? Let's build.</h2><p>Explore my repositories or connect through my social profiles.</p></div><div class="actions"><a class="btn primary" href="https://github.com/coder-with-bca" target="_blank" rel="noreferrer">Connect on GitHub ↗</a><a class="btn" href="https://www.instagram.com/coder_with_bca" target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Akash Maurya · Coder With BCA</span><span>Made with curiosity & code.</span></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
