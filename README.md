@@ -12,7 +12,7 @@ A responsive, single-page developer portfolio for **Akash Maurya**.
 4. Under **Build and deployment**, select **Deploy from a branch**.
 5. Select branch **main** and folder **/(root)**, then save.
 6. Wait for GitHub Pages to publish. Your site URL will usually be:
-   `https://coder-with-bca.github.io/portfolio/`
+   `https://coder-with-bca.github.io/Portfolio/`
 
 If you name the repository exactly `coder-with-bca.github.io`, the site URL will instead be:
 `https://coder-with-bca.github.io/`
